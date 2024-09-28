@@ -15,4 +15,27 @@ snort: È il programma principale di Snort, un sistema di rilevamento delle intr
 
 -l .: Questo parametro indica a Snort di salvare i file di log nella directory corrente (. significa la cartella in cui ti trovi al momento dell'esecuzione del comando). Verrà creata una sottodirectory chiamata log, dove saranno memorizzati i dati catturati.
 
+Di seguito lo screen che riporta che siamo stati in ascolto per 46 secondi e i pacchetti intercettati
+
 ![Alt Text](https://github.com/paoloaglieco/SOC/blob/main/Snort/Scenario_1/sniffing_mode.png)
+
+2- Analisi del log prodotto da SNORT
+
+comando utilizzato sudo snort file.pcap 'port 22'
+sudo snort file.pcap 'port 80'
+
+Dalle le analisi preliminari si evince che un host sta utilizzando la connessione sulla porta 80 e tentando diversi accessi sulla porta 22 sul server ssh
+
+![Alt Text](https://github.com/paoloaglieco/SOC/blob/main/Snort/Scenario_1/port80.png)
+![Alt Text](https://github.com/paoloaglieco/SOC/blob/main/Snort/Scenario_1/port22.png)
+
+
+
+
+
+
+
+
+
+
+
