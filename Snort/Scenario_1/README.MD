@@ -15,4 +15,4 @@ snort: È il programma principale di Snort, un sistema di rilevamento delle intr
 
 -l .: Questo parametro indica a Snort di salvare i file di log nella directory corrente (. significa la cartella in cui ti trovi al momento dell'esecuzione del comando). Verrà creata una sottodirectory chiamata log, dove saranno memorizzati i dati catturati.
 
-![Alt Text](https://github.com/paoloaglieco/SOC/blob/main/Snort/Scenario_1/sniffig_mode.png)
+![Alt Text](https://github.com/paoloaglieco/SOC/blob/main/Snort/Scenario_1/sniffing_mode.png)
