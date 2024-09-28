@@ -28,6 +28,19 @@ Individuazione di una porta anomala 4444 solitamente utilizzate per le reverse s
 ![Alt Text](https://github.com/paoloaglieco/SOC/blob/main/Snort/Scenario_2/port4444.png)
 ![Alt Text](https://github.com/paoloaglieco/SOC/blob/main/Snort/Scenario_2/pkg_port4444.png)
 
+#Remediation 
+Creazione regola snort e attuazione della stessa per impedire la reverse shell
+Comando utilizzati
+sudo nano /etc/snort/rules/local.rules
+sudo snort -c /etc/snort/snort.conf -q -Q --daq afpacket -i eth0:eth01 -A full
+
+![Alt Text](https://github.com/paoloaglieco/SOC/blob/main/Snort/Scenario_2/rule.png)
+
+
+
+
+
+
 
 
 
