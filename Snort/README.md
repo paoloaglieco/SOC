@@ -4,7 +4,7 @@ Analisi e blocco attività malevole su due differenti scenari attraverso l'utili
 
 # Tool
 
-Snort (IPS/IDS)
+Snort (NIDS)
 
 # Scenario 1) Brute Force:
 Analisi dei pacchetti dati con Snort in modalità promiscua, individuazione del pattern di attacco e creazione regola IPS per fermare l'attacco.
