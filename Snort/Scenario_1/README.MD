@@ -38,6 +38,23 @@ Creazione di una regola SNORT che blocca sull'immediato l'attacco e ci permette 
 ![Alt Text](https://github.com/paoloaglieco/SOC/blob/main/Snort/Scenario_1/rule.png)
 
 Comandi utilizzati sudo nano /etc/snort/rules/rules.local
+Applicazione della regola 
+sudo snort -c /etc/snort/snort.conf -q -Q --daq afpacket -i eth0:eth01 -A full
+sudo: Esegui il comando con privilegi amministrativi, poiché Snort necessita di accesso a basso livello alle interfacce di rete.
+
+snort: Avvia il programma Snort, un sistema di rilevamento e prevenzione delle intrusioni (IDS/IPS).
+
+-c /etc/snort/snort.conf: Specifica il file di configurazione di Snort. In questo caso, il percorso del file è /etc/snort/snort.conf. Questo file contiene le regole e i parametri di configurazione che Snort utilizzerà per analizzare il traffico.
+
+-q: Riduce la quantità di output visualizzata nel terminale. Con questa opzione, Snort non mostrerà messaggi verbosi o di debug.
+
+-Q: Pone Snort in modalità inline, che lo trasforma in un sistema di prevenzione delle intrusioni (IPS), oltre a rilevare le minacce (IDS). In modalità inline, Snort può bloccare o modificare il traffico in tempo reale, in base alle regole configurate.
+
+--daq afpacket: Seleziona il modulo DAQ (Data Acquisition) da utilizzare. Il modulo AFPacket consente a Snort di catturare pacchetti da più interfacce di rete contemporaneamente, sia in modalità sniffing che inline.
+
+-i eth0:eth1: Specifica le interfacce di rete da usare. eth0 e eth1 sono due interfacce di rete. Il traffico verrà analizzato tra queste due interfacce in modalità bridge, ovvero Snort monitorerà e interverrà sul traffico che passa attraverso di esse.
+
+-A full: Imposta il tipo di allerta. L'opzione full indica che Snort registrerà all'interno dei file di log tutte le informazioni dettagliate riguardo le allerte, inclusi i dati del pacchetto.
 
 
 
