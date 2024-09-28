@@ -29,6 +29,22 @@ Dalle le analisi preliminari si evince che un host sta utilizzando la connession
 ![Alt Text](https://github.com/paoloaglieco/SOC/blob/main/Snort/Scenario_1/port80.png)
 ![Alt Text](https://github.com/paoloaglieco/SOC/blob/main/Snort/Scenario_1/port22.png)
 
+Dato il conseguente e anomalo traffico sulla porta 22 si puo ipotizzare che l'attacante stia procendo tramite script automatici ad un attacco brute force sul server ssh
+
+#Remediation
+
+Creazione di una regola SNORT che blocca sull'immediato l'attacco e ci permette in futuro di poter migliorare la nostra postura
+
+![Alt Text](https://github.com/paoloaglieco/SOC/blob/main/Snort/Scenario_1/rule.png)
+
+Comandi utilizzati sudo nano /etc/snort/rules/rules.local
+
+
+
+
+
+
+
 
 
 
